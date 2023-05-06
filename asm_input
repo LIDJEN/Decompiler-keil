@@ -1,0 +1,5 @@
+INC R7
+CLR A
+DEC A
+DEC R7
+NOP
