@@ -35,7 +35,7 @@ def bin_2_asm(instructions, console_out=1):
 
     out = ''
     for i in sort:
-        out = out + get_key(asm_bin,i) + "\n"
+        out = out + i + " --> " + get_key(asm_bin,i) + "\n"
     if console_out == 1:
         print(out)
     return out
