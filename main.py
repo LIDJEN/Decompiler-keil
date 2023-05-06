@@ -30,8 +30,13 @@ def bin_2_asm(instructions, console_out=1):
     :return:
     """
     sort = []
-    for i in range(0, len(instructions[0]), 2):
+    i = 0
+    while i < len(instructions[0]):
+    # for i in range(0, len(instructions[0]), 2):
+        while instructions[0][i] == " " and i < len(instructions[0]):
+            i+=1
         sort.append(instructions[0][i:i + 2].upper())
+        i+=2
 
     out = ''
     for i in sort:
