@@ -17,7 +17,7 @@ def asm_2_bin(instructions: list[str], console_out=1) -> str:
     """
     out = ''
     for i in instructions:
-        out = out + asm_bin.get(i, "??")
+        out = out + asm_bin.get(i, i)
     if console_out == 1:
         print("bin out:",out)
     return out
