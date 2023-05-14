@@ -4,20 +4,18 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    when {
-                        branch 'main' 
+                    if (env.BRANCH_NAME == 'main') {
+                        echo 'Running main'
                     }
-                    echo 'Running main'
                 }
             }
         }
         stage('Test') {
             steps {
                 script {
-                    when {
-                        branch 'develop'
+                    if (env.BRANCH_NAME == 'develop') {
+                        echo 'Running develop'
                     }
-                    echo 'Running develop'
                 }
             }
         }
