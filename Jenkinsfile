@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     when {
-                        branch 'release' 
+                        branch 'main' 
                     }
                 }
             }
