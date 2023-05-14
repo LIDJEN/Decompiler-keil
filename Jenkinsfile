@@ -7,16 +7,17 @@ pipeline {
                     when {
                         branch 'main' 
                     }
+                    echo 'Running main'
                 }
             }
         }
         stage('Test') {
             steps {
                 script {
-                    // Выполнить определенные действия в зависимости от ветки
                     when {
-                      branch 'develop'
+                        branch 'develop'
                     }
+                    echo 'Running develop'
                 }
             }
         }
